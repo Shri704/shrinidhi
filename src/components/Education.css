@@ -1,0 +1,142 @@
+.edu-cert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.title-icon {
+  margin-right: 1rem;
+  color: var(--accent);
+  vertical-align: middle;
+}
+
+.edu-timeline {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: var(--surface-light);
+}
+
+.edu-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.edu-dot {
+  position: absolute;
+  left: -1.5rem;
+  top: 1.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateX(-5px);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+}
+
+.edu-content {
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.edu-content:hover {
+  transform: translateX(10px);
+  border-color: var(--accent);
+}
+
+.edu-period {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+}
+
+.edu-degree {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+}
+
+.edu-institution {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.edu-specialization {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.edu-highlight {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 0.3rem 0.8rem;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 6px;
+}
+
+/* Certifications */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateX(10px);
+  border-color: var(--accent-secondary);
+  background: rgba(14, 165, 233, 0.05);
+}
+
+.cert-icon {
+  color: var(--accent-secondary);
+  flex-shrink: 0;
+}
+
+.cert-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+  .edu-cert-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}

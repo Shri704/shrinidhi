@@ -1,0 +1,99 @@
+/* Intersection Observer classes */
+.reveal {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Animations */
+.fade-up {
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s;
+}
+
+.fade-up.is-visible {
+  transform: translateY(0);
+}
+
+.fade-in {
+  transition: opacity 1s ease-out, visibility 1s;
+}
+
+.slide-left {
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s;
+}
+
+.slide-left.is-visible {
+  transform: translateX(0);
+}
+
+.slide-right {
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s;
+}
+
+.slide-right.is-visible {
+  transform: translateX(0);
+}
+
+.scale-in {
+  transform: scale(0.9);
+  transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), visibility 0.6s;
+}
+
+.scale-in.is-visible {
+  transform: scale(1);
+}
+
+/* Utilities */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Custom cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+  mix-blend-mode: exclusion;
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.custom-cursor.hovering {
+  width: 50px;
+  height: 50px;
+  background-color: var(--text);
+  box-shadow: 0 0 25px var(--text);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
