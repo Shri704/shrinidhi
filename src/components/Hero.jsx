@@ -87,9 +87,6 @@ const Hero = () => {
             <a href="#projects" className="btn-primary magnetic">
               Explore My Work <ArrowRight size={18} />
             </a>
-            <a href="/resume.pdf" className="btn-secondary magnetic" target="_blank" rel="noopener noreferrer">
-              Download Resume <Download size={18} />
-            </a>
           </div>
 
           <div className="hero-socials reveal fade-up delay-500">

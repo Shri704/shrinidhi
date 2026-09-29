@@ -83,7 +83,14 @@
   }
   
   .stats-row {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .stat-item {
+    align-items: center;
   }
 }
 

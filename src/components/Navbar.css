@@ -100,4 +100,8 @@
   .mobile-toggle {
     display: block;
   }
+  
+  .navbar.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+  }
 }
